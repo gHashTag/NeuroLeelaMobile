@@ -26,6 +26,7 @@ export const processBalanceOperation = async ({
         newBalance: currentBalance,
         success: false,
         error: message,
+        paymentAmount,
       }
     }
 
@@ -38,6 +39,7 @@ export const processBalanceOperation = async ({
     return {
       newBalance,
       success: true,
+      paymentAmount,
     }
   } catch (error) {
     console.error('Error in processBalanceOperation:', error)
