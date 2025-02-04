@@ -17,7 +17,7 @@ export class BotService {
       })
     }
   }
-
+  //test bots
   public handleUpdate(update: any): void {
     console.log('Обновление получено:', update)
     if (!botFarm || botFarm.length === 0) {
