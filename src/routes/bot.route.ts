@@ -8,12 +8,14 @@ export class BotRoute {
   public router: Router = Router()
   private botController: BotController
 
-  constructor(botService: BotService) {
+  constructor() {
+    const botService = new BotService()
     this.botController = new BotController(botService)
     this.initializeRoutes()
   }
 
   private initializeRoutes() {
+    console.log('CASE 1: BotRoute: initializeRoutes')
     this.router.post(this.path, this.botController.handleWebhook)
   }
 }

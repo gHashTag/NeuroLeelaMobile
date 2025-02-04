@@ -63,6 +63,7 @@ export const {
   PASSWORD2,
   RESULT_URL2,
   NEXT_PUBLIC_MANAGEMENT_TOKEN,
+  PORT_BOTS,
 } = process.env
 
 export const API_URL = isDev ? process.env.NGROK_URL : ORIGIN
